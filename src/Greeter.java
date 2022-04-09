@@ -1,3 +1,4 @@
+package myproject
 public class Greeter {
 String name;
 public Greeter(String name) {
