@@ -1,1 +1,0 @@
-sys out print line;
