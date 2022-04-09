@@ -1,0 +1,1 @@
+sys out print line;
