@@ -1,6 +1,40 @@
 plugins {
-    id 'java-library'
+ id 'java-library'
+ id 'application'
+}
+application {
+ mainClass = 'src.ArrayTest'
 }
 repositories {
-	mavenCentral()
+ mavenCentral()
 }
+dependencies {
+ implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+}
+jar {
+ manifest {
+ attributes "Main-Class": "src.ArrayTest"
+ }
+ from {
+ configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
